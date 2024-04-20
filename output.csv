@@ -1,0 +1,70 @@
+ѕрогнозные значени€ курса доллара на следующие 12 мес€цев:
+495    79.126026
+496    79.716419
+497    80.042420
+498    80.164164
+499    80.383811
+500    80.259873
+501    80.508651
+502    80.742006
+503    80.764586
+504    80.930477
+505    81.397326
+506    81.104779
+Name: predicted_mean, dtype: float64
+—реднеквадратична€ ошибка (MSE): 186.56832960644314
+—редн€€ абсолютна€ ошибка (MAE): 13.645821919060586
+Performing stepwise search to minimize aic
+ ARIMA(2,1,2)(1,0,1)[12] intercept   : AIC=1292.970, Time=32.07 sec
+ ARIMA(0,1,0)(0,0,0)[12] intercept   : AIC=1330.404, Time=0.12 sec
+ ARIMA(1,1,0)(1,0,0)[12] intercept   : AIC=1291.480, Time=0.32 sec
+ ARIMA(0,1,1)(0,0,1)[12] intercept   : AIC=1290.910, Time=0.75 sec
+ ARIMA(0,1,0)(0,0,0)[12]             : AIC=1328.908, Time=0.03 sec
+ ARIMA(0,1,1)(0,0,0)[12] intercept   : AIC=1292.462, Time=0.14 sec
+ ARIMA(0,1,1)(1,0,1)[12] intercept   : AIC=1292.574, Time=0.98 sec
+ ARIMA(0,1,1)(0,0,2)[12] intercept   : AIC=1292.318, Time=0.67 sec
+ ARIMA(0,1,1)(1,0,0)[12] intercept   : AIC=1290.714, Time=0.24 sec
+ ARIMA(0,1,1)(2,0,0)[12] intercept   : AIC=1292.465, Time=0.84 sec
+ ARIMA(0,1,1)(2,0,1)[12] intercept   : AIC=1293.305, Time=3.80 sec
+ ARIMA(0,1,0)(1,0,0)[12] intercept   : AIC=1327.639, Time=1.31 sec
+ ARIMA(1,1,1)(1,0,0)[12] intercept   : AIC=1292.450, Time=3.08 sec
+ ARIMA(0,1,2)(1,0,0)[12] intercept   : AIC=1292.523, Time=1.27 sec
+ ARIMA(1,1,2)(1,0,0)[12] intercept   : AIC=1290.966, Time=1.88 sec
+ ARIMA(0,1,1)(1,0,0)[12]             : AIC=1288.955, Time=0.17 sec
+ ARIMA(0,1,1)(0,0,0)[12]             : AIC=1290.796, Time=0.19 sec
+ ARIMA(0,1,1)(2,0,0)[12]             : AIC=1290.679, Time=0.64 sec
+ ARIMA(0,1,1)(1,0,1)[12]             : AIC=1290.795, Time=0.79 sec
+ ARIMA(0,1,1)(0,0,1)[12]             : AIC=1289.164, Time=0.44 sec
+ ARIMA(0,1,1)(2,0,1)[12]             : AIC=1291.525, Time=2.03 sec
+ ARIMA(0,1,0)(1,0,0)[12]             : AIC=1325.985, Time=0.14 sec
+ ARIMA(1,1,1)(1,0,0)[12]             : AIC=1290.674, Time=1.13 sec
+ ARIMA(0,1,2)(1,0,0)[12]             : AIC=1290.752, Time=0.33 sec
+ ARIMA(1,1,0)(1,0,0)[12]             : AIC=1289.675, Time=0.17 sec
+ ARIMA(1,1,2)(1,0,0)[12]             : AIC=1289.204, Time=1.88 sec
+
+Best model:  ARIMA(0,1,1)(1,0,0)[12]          
+Total fit time: 55.459 seconds
+                                      SARIMAX Results                                      
+===========================================================================================
+Dep. Variable:                                   y   No. Observations:                  495
+Model:             SARIMAX(0, 1, 1)x(1, 0, [], 12)   Log Likelihood                -641.478
+Date:                             Sat, 20 Apr 2024   AIC                           1288.955
+Time:                                     14:05:50   BIC                           1301.563
+Sample:                                          0   HQIC                          1293.905
+                                             - 495                                         
+Covariance Type:                               opg                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+ma.L1          0.2817      0.020     13.908      0.000       0.242       0.321
+ar.S.L12       0.0897      0.044      2.030      0.042       0.003       0.176
+sigma2         0.7857      0.024     32.745      0.000       0.739       0.833
+===================================================================================
+Ljung-Box (L1) (Q):                   0.01   Jarque-Bera (JB):               921.56
+Prob(Q):                              0.91   Prob(JB):                         0.00
+Heteroskedasticity (H):               2.61   Skew:                            -0.22
+Prob(H) (two-sided):                  0.00   Kurtosis:                         9.68
+===================================================================================
+
+Warnings:
+[1] Covariance matrix calculated using the outer product of gradients (complex-step).
